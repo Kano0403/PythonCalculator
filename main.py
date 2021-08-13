@@ -1,18 +1,13 @@
 # from functions.py import *
 
-def main(args):
+def main():
     print("Use + for addition, Use - for subtraction, Use * for multiplication, Use / for division.")
     problem = input("What is the math problem to solve(one-step)? ")
     valid = False
-    functions = {
-        1: "+",
-        2: "-",
-        3: "*",
-        4: "/"
-    }
+    functions = ["+", "-", "*", "/"]
 
     for each in functions:
-        if problem.contains(each):
+        if each in problem:
             valid = True
 
     if not valid:
@@ -21,10 +16,6 @@ def main(args):
 
     print("PASS")
 
-#
-# class Solve:
-# test
-# test asus
 
-
-#    def FindOperation():
+if __name__ == '__main__':
+    main()
