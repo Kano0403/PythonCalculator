@@ -21,16 +21,17 @@ def main():
 
     integers = spaceless_problem.split(operator)
     print(integers)
-    if operator == "+":
-        print(addition(integers))
-    elif operator == "-":
-        print(subtraction(integers))
-    elif operator == "*":
-        print(multiplication(integers))
-    elif operator == "/":
-        print(division(integers))
-    else:
-        print("An error has occurred.")
+    match operator:
+        case "+":
+            print(addition(integers))
+        case "-":
+            print(subtraction(integers))
+        case "*":
+            print(multiplication(integers))
+        case "/":
+            print(division(integers))
+        case _:
+            print("An error has occurred.")
 
 
 if __name__ == '__main__':
